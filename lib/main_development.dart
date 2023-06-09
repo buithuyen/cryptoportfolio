@@ -6,6 +6,9 @@ import 'package:flutter/material.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await Firebase.initializeApp(
+    name: 'CryptoPortfolio_DEV',
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   await bootstrap(() => const App());
 }

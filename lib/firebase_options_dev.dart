@@ -8,7 +8,7 @@ import 'package:flutter/foundation.dart'
 ///
 /// Example:
 /// ```dart
-/// import 'firebase_options_dev.dart';
+/// import 'firebase_options.dart';
 /// // ...
 /// await Firebase.initializeApp(
 ///   options: DefaultFirebaseOptions.currentPlatform,
@@ -25,7 +25,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -55,7 +58,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyA04Qk-YW5Xbg9mxM76yPo9bYWhZvvMmZ0',
-    appId: '1:1051271489868:android:9488b1e6d6569ec78f87e9',
+    appId: '1:1051271489868:android:90636d01435f719f8f87e9',
     messagingSenderId: '1051271489868',
     projectId: 'cryptoportfolio-dev-d53d7',
     storageBucket: 'cryptoportfolio-dev-d53d7.appspot.com',
@@ -63,21 +66,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyA2hDT278QGBBVEHN8WhIdVt0RFli8cagk',
-    appId: '1:1051271489868:ios:2d2be79a023864ab8f87e9',
+    appId: '1:1051271489868:ios:4e2751ffe44a3de48f87e9',
     messagingSenderId: '1051271489868',
     projectId: 'cryptoportfolio-dev-d53d7',
     storageBucket: 'cryptoportfolio-dev-d53d7.appspot.com',
-    iosClientId: '1051271489868-qlfkh6imk6ovm267tdt9k2tr12qkpenb.apps.googleusercontent.com',
-    iosBundleId: 'com.buvaty.cryptoportfolio.dev',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyA2hDT278QGBBVEHN8WhIdVt0RFli8cagk',
-    appId: '1:1051271489868:ios:2d2be79a023864ab8f87e9',
-    messagingSenderId: '1051271489868',
-    projectId: 'cryptoportfolio-dev-d53d7',
-    storageBucket: 'cryptoportfolio-dev-d53d7.appspot.com',
-    iosClientId: '1051271489868-qlfkh6imk6ovm267tdt9k2tr12qkpenb.apps.googleusercontent.com',
-    iosBundleId: 'com.buvaty.cryptoportfolio.dev',
+    iosClientId: '1051271489868-c68be7g17q6jp7eup23btipti5mbnbu0.apps.googleusercontent.com',
+    iosBundleId: 'com.buvaty.cryptoportfolio',
   );
 }
