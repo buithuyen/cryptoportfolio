@@ -1,5 +1,5 @@
 import 'package:crypto_portfolio/app/app.dart';
-import 'package:crypto_portfolio/counter/counter.dart';
+import 'package:crypto_portfolio/presentation/counter/view/counter_page.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

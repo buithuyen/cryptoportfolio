@@ -1,5 +1,5 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:crypto_portfolio/counter/counter.dart';
+import 'package:crypto_portfolio/presentation/counter/cubit/counter_cubit.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
